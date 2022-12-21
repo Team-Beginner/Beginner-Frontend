@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap%27");
+body {
+  font-family: "Noto Sans KR", "sans-serif";
+  color: #7c7c7c;
+}
+
+form {
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  left: 0px;
+  top: 0px;
+}
+
+.input-error {
+  color: #ff3737;
+}
+
+#logo-img {
+  background-image: url(img/Logo-Image.png);
+  width: 220px;
+  height: 220px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 98px;
+}
+
+#logo-text {
+  font-size: 80px;
+  font-weight: 200;
+  margin-top: 47px;
+  color: #000000;
+}
+
+input {
+  width: 500px;
+  height: 70px;
+  font-size: 20px;
+  border-radius: 15px;
+  text-indent: 18px;
+  margin-top: 28px;
+  border: 2px solid black;
+}
+
+#hidden {
+  visibility: hidden;
+}
+
+#visible {
+  visibility: visible;
+}
+
+#submit {
+  background: #f49795;
+  border: none;
+  color: white;
+  font-family: "Noto Sans KR", "sans-serif";
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#create-account {
+  padding-top: 20px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+#find-link {
+  color: #4aa9de;
+}
+
+.link:last-child {
+  color: #191919;
+}
+
+#create-account {
+  margin-top: 60px;
+}
+
+input::placeholder {
+  font-family: "Noto Sans KR", "sans-serif";
+}
