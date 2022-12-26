@@ -23,29 +23,38 @@ form {
 }
 
 #logo-img {
-  background-image: url(img/Logo-Image.png);
+  background-image: url(../pages/img/Logo.svg);
   width: 220px;
   height: 220px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 98px;
+  margin-top: 58px;
 }
 
 #logo-text {
   font-size: 80px;
   font-weight: 200;
-  margin-top: 47px;
+  margin-top: 27px;
   color: #000000;
+  margin-bottom: 25px;
 }
 
 input {
-  width: 500px;
-  height: 70px;
+  width: 25em;
   font-size: 20px;
-  border-radius: 15px;
+  height: 3em;
+  border-radius: 1em;
   text-indent: 18px;
-  margin-top: 28px;
-  border: 2px solid black;
+  border: 2px solid #999999;
+}
+
+span {
+  margin-bottom: 5px;
+}
+
+input::placeholder {
+  font-family: "Noto Sans KR", "sans-serif";
+  color: #999999;
 }
 
 #hidden {
@@ -57,34 +66,32 @@ input {
 }
 
 #submit {
-  background: #f49795;
+  background: #ea7274;
   border: none;
   color: white;
   font-family: "Noto Sans KR", "sans-serif";
   font-weight: 500;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 #create-account {
-  padding-top: 20px;
+  position: absolute;
+  bottom: 10px;
 }
 
 .link {
   text-decoration: none;
 }
 
-#find-link {
-  color: #4aa9de;
-}
-
 .link:last-child {
   color: #191919;
 }
 
-#create-account {
-  margin-top: 60px;
+#find-link {
+  color: #4aa9de;
 }
 
-input::placeholder {
-  font-family: "Noto Sans KR", "sans-serif";
+#create-account {
+  margin-top: 60px;
 }
