@@ -52,7 +52,7 @@ header nav ul li {
   font-size: 18px;
   font-weight: 400;
 }
-header nav ul li:hover {
+header nav ul li a:hover {
   color: #ea7274;
 }
 .siderbar {
@@ -236,4 +236,19 @@ section .list .list__item .completed {
 }
 section .list .list__item .notCompleted {
   color: #ff0000;
+}
+section .top {
+  width: 89%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f49795;
+  cursor: pointer;
+  font-size: 16px;
 }

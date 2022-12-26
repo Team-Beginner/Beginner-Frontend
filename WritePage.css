@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #000;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+	background-color: #fff4f2;
+}
+header {
+	display: flex;
+	width: 100%;
+	/* position: fixed; */
+	background-color: #fff4f2;
+}
+.logoimg {
+	width: 36px;
+	height: 36px;
+}
+.logotext {
+	font-size: 33px;
+	font-weight: 700;
+	color: #1d3343;
+	padding-left: 7px;
+	height: 35px;
+	line-height: 35px;
+}
+.logo {
+	display: flex;
+	margin: 80px 0 0 128px;
+}
+header nav {
+	z-index: 1;
+}
+header nav ul {
+	display: flex;
+	list-style: none;
+}
+header nav ul li {
+	margin: 88px 120px 0 120px;
+	font-size: 18px;
+	font-weight: 400;
+}
+header nav ul li a:hover {
+	color: #ea7274;
+}
+
+.inputForm {
+	width: 950px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	margin: 100px auto;
+	padding: 20px;
+}
+
+.inputForm .content {
+	display: flex;
+	flex-direction: column;
+}
+
+.inputForm .jumee .selectForm {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+.inputForm .jumee .selectForm select {
+	text-align: center;
+	border: none;
+	padding: 5px;
+	background-color: #f49795;
+	width: 100px;
+	border-radius: 5px;
+	outline: none;
+}
+.inputForm .content input {
+	height: 50px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+.inputForm .content textarea {
+	height: 300px;
+	resize: none;
+	padding: 15px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+.inputForm .jumee {
+	display: flex;
+	justify-content: space-between;
+}
+
+.inputForm .jumee .writeButton {
+	width: 100px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f49795;
+	cursor: pointer;
+}
