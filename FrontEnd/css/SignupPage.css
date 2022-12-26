@@ -31,7 +31,6 @@ form {
 	background-size: cover;
 	margin-top: 20px;
 	z-index: -1;
-	scale: 0.9;
 }
 
 #logo-text {
@@ -97,9 +96,7 @@ input::placeholder {
 }
 
 #remind-account {
-	position: absolute;
-	bottom: 10px;
-	font-size: 16px;
+	margin-top: 20px;
 }
 
 .link {
