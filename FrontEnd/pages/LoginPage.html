@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/LoginPage.css" />
-  </head>
-  <body>
-    <form id="login-form">
-      <div class="form-items" id="logo-img"></div>
-      <div class="form-items" id="logo-text">Work Out</div>
-      <input
-        class="form-items"
-        id="email"
-        type="text"
-        placeholder="이메일을 입력해주세요"
-      />
-      <span class="input-error" name="email-error" id="hidden">
-        이메일을 다시 입력해주세요.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-      </span>
-      <input
-        class="form-items"
-        id="password"
-        type="password"
-        placeholder="비밀번호를 입력해주세요"
-      />
-      <span class="input-error" name="pw-error" id="hidden">
-        비밀번호를 다시 입력해주세요.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-      </span>
-      <input class="form-items" type="submit" value="로그인" id="submit" />
-      <span class="form-items" id="find-password">
-        비밀번호를 잊어버리셨나요?
-        <a id="find-link" class="link" href="ForgotPasswordPage.html">
-          비밀번호 찾기
-        </a>
-      </span>
-      <div id="create-account">
-        아직 계정이 없으신가요?
-        <a class="link" href="SignupPage.html"><b>회원가입 ></b></a>
-      </div>
-    </form>
-  </body>
-  <script src="../js/LoginPage.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Work Out</title>
+		<link rel="stylesheet" href="../css/LoginPage.css" />
+		<link rel="icon" href="./img/Logo.png" />
+	</head>
+	<body>
+		<form id="login-form">
+			<div class="form-items" id="logo-img"></div>
+			<div class="form-items" id="logo-text">Work Out</div>
+			<input
+				class="form-items"
+				id="email"
+				type="text"
+				placeholder="이메일을 입력해주세요"
+			/>
+			<span class="input-error" name="email-error" id="hidden">
+				이메일을 다시 입력해주세요.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+			</span>
+			<input
+				class="form-items"
+				id="password"
+				type="password"
+				placeholder="비밀번호를 입력해주세요"
+			/>
+			<span class="input-error" name="pw-error" id="hidden">
+				비밀번호를 다시 입력해주세요.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+			</span>
+			<input class="form-items" type="submit" value="로그인" id="submit" />
+			<div id="create-account">
+				아직 계정이 없으신가요?
+				<a class="link" href="SignupPage.html"><b>회원가입 ></b></a>
+			</div>
+		</form>
+	</body>
+	<script src="../js/LoginPage.js"></script>
 </html>

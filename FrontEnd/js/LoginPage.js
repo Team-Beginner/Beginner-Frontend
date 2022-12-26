@@ -40,3 +40,7 @@ function CheckEmail(str) {
     return true;
   }
 }
+
+// git pull origin master
+// git fetch origin 
+// feature/{기능이름}

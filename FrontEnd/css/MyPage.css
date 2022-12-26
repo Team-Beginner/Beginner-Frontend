@@ -77,16 +77,6 @@ section .MyPage__header .info__container .info .email {
 	color: #737373;
 	margin-left: 15px;
 }
-section .MyPage__header .info__container .p__buttons button {
-	background-color: #fff;
-	border: none;
-	padding: 15px 8px;
-	cursor: pointer;
-}
-section .MyPage__header .info__container .p__buttons button:first-child::after {
-	content: 'ㅣ';
-	margin-left: 10px;
-}
 section .work {
 	font-size: 18px;
 	margin-left: 20px;
