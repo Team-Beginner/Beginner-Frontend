@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #000;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+	/* display: flex; */
+	background-color: #fff4f2;
+}
+header {
+	display: flex;
+	width: 100%;
+	/* position: fixed; */
+	background-color: #fff4f2;
+}
+.logoimg {
+	width: 36px;
+	height: 36px;
+}
+.logotext {
+	font-size: 33px;
+	font-weight: 700;
+	color: #1d3343;
+	padding-left: 7px;
+	height: 35px;
+	line-height: 35px;
+}
+.logo {
+	display: flex;
+	margin: 80px 0 0 128px;
+}
+header nav {
+	z-index: 1;
+}
+header nav ul {
+	display: flex;
+	list-style: none;
+}
+header nav ul li {
+	margin: 88px 120px 0 120px;
+	font-size: 18px;
+	font-weight: 400;
+}
+header nav ul li a:hover {
+	color: #ea7274;
+}
+section {
+	width: 1300px;
+	height: 550px;
+	background-color: #fff;
+	margin: 50px auto;
+	border-radius: 5px;
+}
+section .MyPage__header .material-symbols-outlined {
+	font-size: 140px;
+	padding: 10px;
+}
+section .MyPage__header {
+	display: flex;
+	align-items: center;
+}
+section .MyPage__header section .MyPage__header .info__container {
+	display: flex;
+	flex-direction: column;
+}
+section .MyPage__header .info__container .info {
+}
+section .MyPage__header .info__container .info .name {
+	font-size: 26px;
+}
+section .MyPage__header .info__container .info .email {
+	font-size: 16px;
+	color: #737373;
+	margin-left: 15px;
+}
+section .MyPage__header .info__container .p__buttons button {
+	background-color: #fff;
+	border: none;
+	padding: 15px 8px;
+	cursor: pointer;
+}
+section .MyPage__header .info__container .p__buttons button:first-child::after {
+	content: 'ㅣ';
+	margin-left: 10px;
+}
+section .work {
+	font-size: 18px;
+	margin-left: 20px;
+	text-decoration: underline 3px #f49795;
+}
+section .list {
+	width: 79.5%;
+	height: 80%;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+section .list .list__item {
+	width: 100%;
+	height: 60px;
+	background-color: #ffffff;
+	list-style: none;
+	padding: 18px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid #000;
+}
+
+section .list .list__item .item__author {
+	width: 20%;
+	display: flex;
+	justify-content: space-between;
+	margin-right: 15px;
+}
+
+section .list .list__item .completed {
+	color: #0085ff;
+}
+section .list .list__item .notCompleted {
+	color: #ff0000;
+}
