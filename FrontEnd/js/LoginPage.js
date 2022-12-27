@@ -17,14 +17,15 @@ function submit(event) {
       emailError.setAttribute("id", "hidden");
       emailInput.style.borderColor = "#999999";
     }, 3000);
-  }
-  if (pwInput.value == "") {
+  } else if (pwInput.value == "") {
     pwError.setAttribute("id", "visible");
     pwInput.style.borderColor = "#FF3737";
     setTimeout(() => {
       pwError.setAttribute("id", "hidden");
       pwInput.style.borderColor = "#999999";
     }, 3000);
+  } else {
+    loginPost();
   }
 }
 
@@ -39,4 +40,20 @@ function CheckEmail(str) {
   } else {
     return true;
   }
+}
+
+async function loginPost() {
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: emailInput.value,
+      password: pwInput.value,
+      userId: 1,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 }
