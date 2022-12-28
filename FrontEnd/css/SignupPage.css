@@ -59,7 +59,8 @@ input[type='submit'] {
 	cursor: pointer;
 }
 
-#email {
+#email,
+#email-certify {
 	width: 19em;
 }
 
@@ -68,7 +69,8 @@ input[type='submit'] {
 	margin-bottom: 12px;
 }
 
-#email-certify-btn {
+#email-post-btn,
+#email-head-btn {
 	width: 5.5em;
 	background-color: #f49795;
 	border: none;

@@ -88,6 +88,10 @@ input::placeholder {
 	text-decoration: none;
 }
 
+#forgot-pw-link {
+	color: #4aa9de;
+}
+
 .link:last-child {
 	color: #191919;
 }

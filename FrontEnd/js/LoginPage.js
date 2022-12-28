@@ -1,28 +1,46 @@
+const backendLink = 'https://bad3-210-218-52-13.jp.ngrok.io';
 const submitBtn = document.getElementById('submit');
-const emailInput = document.querySelector('#email');
-const pwInput = document.querySelector('#password');
+const email = document.querySelector('#email');
+const password = document.querySelector('#password');
 
 const emailError = document.querySelector(".input-error[name='email-error']");
 const pwError = document.querySelector(".input-error[name='pw-error']");
 
 const loginForm = document.getElementById('login-form');
 
+function loginPost() {
+	fetch(`${backendLink}/member/login`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			email: email.value,
+			password: password.value,
+		}),
+	}).then((response) => {
+		console.log(response);
+		if (response.ok == true) {
+			location.href = '';
+		}
+	});
+}
 function submit(event) {
 	event.preventDefault();
 
-	if (CheckEmail(emailInput.value) == false) {
+	if (CheckEmail(email.value) == false) {
 		emailError.setAttribute('id', 'visible');
-		emailInput.style.borderColor = '#FF3737';
+		email.style.borderColor = '#FF3737';
 		setTimeout(() => {
 			emailError.setAttribute('id', 'hidden');
-			emailInput.style.borderColor = '#999999';
+			email.style.borderColor = '#999999';
 		}, 3000);
-	} else if (pwInput.value == '') {
+	} else if (password.value == '') {
 		pwError.setAttribute('id', 'visible');
-		pwInput.style.borderColor = '#FF3737';
+		password.style.borderColor = '#FF3737';
 		setTimeout(() => {
 			pwError.setAttribute('id', 'hidden');
-			pwInput.style.borderColor = '#999999';
+			password.style.borderColor = '#999999';
 		}, 3000);
 	} else {
 		loginPost();
@@ -40,19 +58,4 @@ function CheckEmail(str) {
 	} else {
 		return true;
 	}
-}
-
-async function loginPost() {
-	fetch('', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({
-			email: emailInput.value,
-			password: pwInput.value,
-		}),
-	})
-		.then((response) => response.json())
-		.then((data) => console.log(data));
 }
