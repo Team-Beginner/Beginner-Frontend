@@ -50,7 +50,17 @@ input {
 	margin-bottom: 12px;
 }
 
-#email {
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='submit'] {
+	cursor: pointer;
+}
+
+#email,
+#email-certify {
 	width: 19em;
 }
 
@@ -59,7 +69,8 @@ input {
 	margin-bottom: 12px;
 }
 
-#email-certify-btn {
+#email-post-btn,
+#email-head-btn {
 	width: 5.5em;
 	background-color: #f49795;
 	border: none;

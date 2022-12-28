@@ -1,56 +1,116 @@
-const emailInput = document.getElementById("email");
-const errorMsg = document.getElementById("error-msg");
-const emailCert = document.getElementById("email-certify");
-const classNum = document.getElementById("class-num");
-const stdName = document.getElementById("name");
-const password = document.getElementById("password");
-const rewritePw = document.getElementById("rewrite-pw");
+const backendLink = 'https://bad3-210-218-52-13.jp.ngrok.io';
 
-const form = document.getElementById("forgot-pw-form");
+const email = document.getElementById('email');
+const errorMsg = document.getElementById('error-msg');
+const emailCert = document.getElementById('email-certify');
+const stdNum = document.getElementById('student-num');
+const stdName = document.getElementById('name');
+const password = document.getElementById('password');
+const rewritePw = document.getElementById('rewrite-pw');
+const postBtn = document.getElementById('email-post-btn');
+const headBtn = document.getElementById('email-head-btn');
+
+const form = document.getElementById('forgot-pw-form');
 
 const errorMsgList = [
-  "이메일을 다시 입력해주세요.",
-  "인증코드가 다릅니다.",
-  "학번을 다시 입력해주세요.",
-  "이름을 다시 입력해 주세요.",
-  "비밀번호가 서로 다릅니다.",
+	'이메일을 다시 입력해주세요.',
+	'인증코드가 다릅니다.',
+	'학번을 다시 입력해주세요.',
+	'이름을 다시 입력해 주세요.',
+	'비밀번호가 서로 다릅니다.',
 ];
 
-function submit(event) {
-  event.preventDefault();
+function emailPost() {
+	fetch(`https://bad3-210-218-52-13.jp.ngrok.io/email/send`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			email: email.value,
+		}),
+	}).then((response) => {
+		console.log(response);
+	});
+}
 
-  if (!CheckEmail(emailInput.value)) {
-    errorShow(emailInput, 0);
-  } else if (emailCert.value == "") {
-    errorShow(emailCert, 1);
-  } else if (classNum.value == "") {
-    errorShow(classNum, 2);
-  } else if (stdName.value == "") {
-    errorShow(stdName, 3);
-  } else if (password.value != rewritePw.value || password.value == "") {
-    errorShow(password, 4);
-  }
+function emailHead() {
+	fetch(
+		`${backendLink}/email?email=${email.value}&&authKey=${emailCert.value}`,
+		{
+			method: 'HEAD',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}
+	).then((response) => {
+		console.log(response);
+		if (response.ok == true) {
+			emailCert.disabled = true;
+			email.disabled = true;
+			postBtn.style.backgroundColor = '#00CE5D';
+			headBtn.style.backgroundColor = '#00CE5D';
+		}
+	});
+}
+
+function memberSignup() {
+	fetch(`https://bad3-210-218-52-13.jp.ngrok.io/member/signup`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			email: email.value,
+			password: password.value,
+			name: stdName.value,
+			number: stdNum.value,
+			role: 'STUDENT',
+		}),
+	}).then((response) => {
+		console.log(response);
+	});
+}
+
+function submit(event) {
+	event.preventDefault();
+
+	if (!CheckEmail(email.value)) {
+		errorShow(email, 0);
+	} else if (emailCert.value == '') {
+		errorShow(emailCert, 1);
+	} else if (stdNum.value == '') {
+		errorShow(classNum, 2);
+	} else if (stdName.value == '') {
+		errorShow(stdName, 3);
+	} else if (password.value != rewritePw.value || password.value == '') {
+		errorShow(password, 4);
+	} else {
+		memberSignup();
+	}
 }
 
 function errorShow(str, num) {
-  errorMsg.innerText = errorMsgList[num];
-  errorMsg.setAttribute("class", "visible");
-  str.style.borderColor = "#FF3737";
-  setTimeout(() => {
-    errorMsg.setAttribute("class", "hidden");
-    str.style.borderColor = "#999999";
-  }, 3000);
+	errorMsg.innerText = errorMsgList[num];
+	errorMsg.setAttribute('class', 'visible');
+	str.style.borderColor = '#FF3737';
+	setTimeout(() => {
+		errorMsg.setAttribute('class', 'hidden');
+		str.style.borderColor = '#999999';
+	}, 3000);
 }
 
 function CheckEmail(str) {
-  var reg_email =
-    /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+	var reg_email =
+		/^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
 
-  if (!reg_email.test(str)) {
-    return false;
-  } else {
-    return true;
-  }
+	if (!reg_email.test(str)) {
+		return false;
+	} else {
+		return true;
+	}
 }
 
-form.addEventListener("submit", submit);
+postBtn.addEventListener('click', emailPost);
+headBtn.addEventListener('click', emailHead);
+form.addEventListener('submit', submit);
