@@ -50,6 +50,15 @@ input {
 	margin-bottom: 12px;
 }
 
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='submit'] {
+	cursor: pointer;
+}
+
 #email {
 	width: 19em;
 }
