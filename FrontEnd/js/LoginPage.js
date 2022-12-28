@@ -43,7 +43,7 @@ function CheckEmail(str) {
 }
 
 async function loginPost() {
-	fetch('https://jsonplaceholder.typicode.com/posts', {
+	fetch('', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -51,7 +51,6 @@ async function loginPost() {
 		body: JSON.stringify({
 			email: emailInput.value,
 			password: pwInput.value,
-			userId: 1,
 		}),
 	})
 		.then((response) => response.json())

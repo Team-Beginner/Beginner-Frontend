@@ -1,4 +1,4 @@
-const emailInput = document.getElementById('email');
+const email = document.getElementById('email');
 const errorMsg = document.getElementById('error-msg');
 const emailCert = document.getElementById('email-certify');
 const stdNum = document.getElementById('student-num');
@@ -19,7 +19,7 @@ const errorMsgList = [
 function submit(event) {
 	event.preventDefault();
 
-	if (!CheckEmail(emailInput.value)) {
+	if (!CheckEmail(email.value)) {
 		errorShow(emailInput, 0);
 	} else if (emailCert.value == '') {
 		errorShow(emailCert, 1);
@@ -30,14 +30,14 @@ function submit(event) {
 	} else if (password.value != rewritePw.value || password.value == '') {
 		errorShow(password, 4);
 	} else {
-		fetch('https://jsonplaceholder.typicode.com/posts', {
+		fetch('https://67bf-210-218-52-13.jp.ngrok.io/', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
-				email: emailInput.value,
-				password: pwInput.value,
+				email: email.value,
+				password: password.value,
 				name: stdName.value,
 				studentNumber: stdNum.value,
 				role: String,
