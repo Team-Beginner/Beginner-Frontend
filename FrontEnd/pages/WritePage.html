@@ -17,7 +17,7 @@
 			<nav>
 				<ul>
 					<li><a href="./NoticePage.html">공지사항</a></li>
-					<li><a href="./MainPage.html">운동게시판</a></li>
+					<li><a href="./MainPage.html">운동 게시판</a></li>
 					<li><a href="./RequestPage.html">요청사항</a></li>
 					<li><a href="./MyPage.html">마이페이지</a></li>
 				</ul>
@@ -26,7 +26,7 @@
 		<section class="inputForm">
 			<div class="jumee">
 				<div class="selectForm">
-					<select>
+					<select class="category">
 						<option>카테고리</option>
 						<option value="배드민턴">배드민턴</option>
 						<option value="축구">축구</option>
@@ -34,7 +34,7 @@
 						<option value="e스포츠">e스포츠</option>
 						<option value="기타">기타</option>
 					</select>
-					<select>
+					<select class="kind">
 						<option>글 종류</option>
 						<option value="모집">모집</option>
 						<option value="잡담">잡담</option>
@@ -45,9 +45,10 @@
 				<button class="writeButton">작성</button>
 			</div>
 			<div class="content">
-				<input placeholder="제목을 입력해주세요." />
-				<textarea placeholder="내용을 입력해주세요"></textarea>
+				<input class="title" placeholder="제목을 입력해주세요." />
+				<textarea class="contents" placeholder="내용을 입력해주세요"></textarea>
 			</div>
 		</section>
+		<script src="../js/WritePage.js"></script>
 	</body>
 </html>
