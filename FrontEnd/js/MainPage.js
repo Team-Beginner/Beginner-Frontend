@@ -17,4 +17,5 @@ function accessCert() {
 	}
 }
 
-document.addEventListener('');
+accessCert();
+getListItem();
