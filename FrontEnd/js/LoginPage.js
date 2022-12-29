@@ -1,4 +1,4 @@
-const backendLink = 'https://bad3-210-218-52-13.jp.ngrok.io';
+const backendLink = 'https://23ed-210-218-52-13.jp.ngrok.io';
 const submitBtn = document.getElementById('submit');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
