@@ -1,4 +1,4 @@
-const backendLink = 'https://f956-210-218-52-13.jp.ngrok.io';
+const backendLink = 'https://0988-210-218-52-13.eu.ngrok.io';
 const submitBtn = document.getElementById('submit');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
@@ -24,6 +24,7 @@ function loginPost() {
 			console.log(response);
 			localStorage.setItem('access-token', response.accessToken);
 			localStorage.setItem('refresh-token', response.refreshToken);
+			localStorage.setItem('username', response.name);
 			location.href = 'MainPage.html';
 		});
 }
