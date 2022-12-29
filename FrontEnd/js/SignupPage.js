@@ -1,4 +1,4 @@
-const backendLink = 'https://bad3-210-218-52-13.jp.ngrok.io';
+const backendLink = 'https://c04f-210-218-52-13.jp.ngrok.io';
 
 const email = document.getElementById('email');
 const errorMsg = document.getElementById('error-msg');
@@ -21,7 +21,7 @@ const errorMsgList = [
 ];
 
 function emailPost() {
-	fetch(`https://bad3-210-218-52-13.jp.ngrok.io/email/send`, {
+	fetch(`${backendLink}/email/send`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function emailHead() {
 }
 
 function memberSignup() {
-	fetch(`https://bad3-210-218-52-13.jp.ngrok.io/member/signup`, {
+	fetch(`${backendLink}/member/signup`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
