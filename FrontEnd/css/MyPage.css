@@ -116,3 +116,9 @@ section .list .list__item .completed {
 section .list .list__item .notCompleted {
 	color: #ff0000;
 }
+section .MyPage__header .info__container .p__buttons button {
+	background-color: #fff;
+	border: none;
+	padding: 15px 8px;
+	cursor: pointer;
+}
