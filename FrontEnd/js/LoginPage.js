@@ -1,4 +1,4 @@
-const backendLink = 'https://23ed-210-218-52-13.jp.ngrok.io';
+const backendLink = 'https://f956-210-218-52-13.jp.ngrok.io';
 const submitBtn = document.getElementById('submit');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
@@ -18,12 +18,14 @@ function loginPost() {
 			email: email.value,
 			password: password.value,
 		}),
-	}).then((response) => {
-		console.log(response);
-		if (response.ok == true) {
-			location.href = '';
-		}
-	});
+	})
+		.then((responce) => responce.json())
+		.then((response) => {
+			console.log(response);
+			localStorage.setItem('access-token', response.accessToken);
+			localStorage.setItem('refresh-token', response.refreshToken);
+			location.href = 'MainPage.html';
+		});
 }
 function submit(event) {
 	event.preventDefault();
@@ -59,3 +61,10 @@ function CheckEmail(str) {
 		return true;
 	}
 }
+
+function accessCert() {
+	if (localStorage.getItem('access-token')) {
+		location.href = 'MainPage.html';
+	}
+}
+accessCert();
