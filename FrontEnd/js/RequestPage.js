@@ -1,4 +1,4 @@
-const backendLink = 'https://0988-210-218-52-13.eu.ngrok.io';
+const backendLink = 'https://39d5-210-218-52-13.eu.ngrok.io';
 const header = {
 	'Content-Type': 'application/json',
 	'Access-Control-Allow-Origin': '*',

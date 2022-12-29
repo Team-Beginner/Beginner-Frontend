@@ -1,4 +1,4 @@
-const backendLink = 'https://0988-210-218-52-13.eu.ngrok.io';
+const backendLink = 'https://39d5-210-218-52-13.eu.ngrok.io';
 const submitBtn = document.getElementById('submit');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');

@@ -1,4 +1,4 @@
-const backendLink = 'https://0988-210-218-52-13.eu.ngrok.io';
+const backendLink = 'https://39d5-210-218-52-13.eu.ngrok.io';
 
 const contents = document.getElementsByClassName('contents');
 const title = document.getElementsByClassName('title');
