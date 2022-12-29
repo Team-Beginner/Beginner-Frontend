@@ -1,9 +1,4 @@
-const backendLink = 'https://f956-210-218-52-13.jp.ngrok.io';
-const header = {
-	'Content-Type': 'application/json',
-	'Access-Control-Allow-Origin': '*',
-};
-
+const backendLink = 'https://f956-210-218-52-13.jp.ngrok.io/';
 const title = document.querySelector('.title').value;
 const content = document.querySelector('.contents').value;
 const category = document.querySelector('.category').value;
@@ -17,10 +12,19 @@ const writeKind = {
 };
 
 function writeBoard() {
-	fetch(`${backendLink}/${writeKind[kind]}/add`, {
-		method: 'post',
-		headers: header,
-		body: { content, title, category, kind },
+	fetch(`${backendLink}/notice/add`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			Authorization: localStorage.getItem('access-token'),
+		},
+		body: {
+			content: content,
+			title: title,
+			userName: 'String',
+			category: category,
+			kind: kind,
+		},
 	})
 		.then((response) => response.json())
 		.then((data) => console.log(data));
