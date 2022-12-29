@@ -1,13 +1,14 @@
-const backendLink = 'https://f956-210-218-52-13.jp.ngrok.io';
+const backendLink = 'https://39d5-210-218-52-13.eu.ngrok.io';
 const header = {
 	'Content-Type': 'application/json',
 	'Access-Control-Allow-Origin': '*',
 };
 
 const heading = document.querySelector('.heading');
-const date = docuemnt.querySelector('.date');
+const date = document.querySelector('.date');
 const summary = document.querySelector('summary');
-// are you sleeping? if you can watch this sentense, please say something beacause turn on the mic
+const chatBtn = document.querySelector('#chatButton');
+
 function getItem() {
 	fetch(`${backendLink}/board`, { headers: header })
 		.then((response) => response.json())
@@ -18,5 +19,8 @@ function accessCert() {
 		location.href = 'LoginPage.html';
 	}
 }
-accessCert();
-getItem();
+
+chatBtn.addEventListener('click', () => {
+	document.querySelector('#comment-input').innerHTML =
+		'<input id="comment" type="text" placeholder="댓글 작성하기" /><input id="comment-post" type="button" value="작성" />';
+});

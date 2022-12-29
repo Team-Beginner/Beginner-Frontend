@@ -1,11 +1,10 @@
-const backendLink = 'https://f956-210-218-52-13.jp.ngrok.io';
+const backendLink = 'https://39d5-210-218-52-13.eu.ngrok.io';
 const header = {
 	'Content-Type': 'application/json',
 	'Access-Control-Allow-Origin': '*',
 };
 
 const ItemList = document.querySelector('.list');
-
 function getListItem() {
 	fetch(`${backendLink}/board`, { headers: header })
 		.then((response) => response.json())

@@ -120,7 +120,7 @@ header nav ul li a:hover {
 .content .buttons .applyButton span {
 	margin: 0 auto;
 }
-.content .buttons .chatButton {
+.content .buttons #chatButton {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -129,6 +129,7 @@ header nav ul li a:hover {
 	width: 60px;
 	height: 40px;
 	border-radius: 5px;
+	cursor: pointer;
 }
 .comment {
 	margin-bottom: 40px;
@@ -159,4 +160,29 @@ header nav ul li a:hover {
 	display: flex;
 	justify-content: space-between;
 	margin-right: 15px;
+}
+
+#comment-input {
+	display: flex;
+	width: 1920px;
+	text-align: center;
+	justify-content: center;
+}
+#comment {
+	width: 1200px;
+	height: 60px;
+	border: none;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	text-indent: 20px;
+}
+
+#comment-post {
+	width: 80px;
+	height: 60px;
+	margin-left: 10px;
+	border: none;
+	background-color: #f49795;
+	border-radius: 20px;
+	cursor: pointer;
 }

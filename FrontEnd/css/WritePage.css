@@ -97,7 +97,7 @@ header nav ul li a:hover {
 	justify-content: space-between;
 }
 
-.inputForm .jumee .writeButton {
+#write-button {
 	width: 100px;
 	height: 40px;
 	border: none;
