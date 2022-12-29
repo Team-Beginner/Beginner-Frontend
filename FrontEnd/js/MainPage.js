@@ -1,15 +1,19 @@
 const backendLink = 'https://f956-210-218-52-13.jp.ngrok.io';
-const header = {
-	'Content-Type': 'application/json',
-	'Access-Control-Allow-Origin': '*',
-};
 
 const ItemList = document.querySelector('.list');
 
 function getListItem() {
-	fetch(`${backendLink}/board`, { headers: header })
-		.then((response) => response.json())
-		.then((data) => console.log(data));
+	fetch(`${backendLink}/board`, {
+		headers: {
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*',
+			Authorization: localStorage.getItem('access-token'),
+		},
+	})
+		.then((responce) => responce.json())
+		.then((response) => {
+			console.log(response);
+		});
 }
 
 function accessCert() {
