@@ -1,4 +1,4 @@
-const backendLink = 'https://39d5-210-218-52-13.eu.ngrok.io';
+const backendLink = 'https://fd9d-211-244-186-39.jp.ngrok.io';
 
 const contents = document.getElementById('contents');
 const title = document.getElementById('title');
@@ -23,7 +23,7 @@ function writePost() {
 		}),
 	}).then((response) => {
 		console.log(response);
-		location.href('RequireWritePage.html');
+		location.href('RequestPage.html');
 	});
 }
 

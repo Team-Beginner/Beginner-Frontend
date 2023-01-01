@@ -47,17 +47,21 @@
 				</div>
 				<div class="buttons">
 					<div id="chatButton">
-						<span class="material-symbols-outlined"> chat </span>5
+						<span class="material-symbols-outlined"> chat </span
+						><span id="idk">2</span>
 					</div>
 					<div class="applyButton">
-						<span>3/4</span>
-						<button>신청</button>
+						<span id="applyMem">3/4</span>
+						<button id="button">신청</button>
 					</div>
 				</div>
 			</section>
 			<section class="comment">
-				<div id="comment-input"></div>
-				<ul class="list">
+				<div id="comment-input">
+					<input id="comment" type="text" placeholder="댓글 작성하기" />
+					<input id="comment-post" type="button" value="작성" />
+				</div>
+				<ul class="list" id="list">
 					<li class="list__item">
 						<span>얘들아 열심히 해~~~<span class="completed"></span></span>
 						<div class="item__author">

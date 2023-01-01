@@ -222,6 +222,7 @@ section .list .list__item {
 	border-radius: 10px;
 	display: flex;
 	justify-content: space-between;
+	cursor: pointer;
 }
 
 section .list .list__item .item__author {

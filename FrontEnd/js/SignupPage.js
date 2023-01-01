@@ -1,4 +1,4 @@
-const backendLink = 'https://39d5-210-218-52-13.eu.ngrok.io';
+const backendLink = 'https://fd9d-211-244-186-39.jp.ngrok.io';
 
 const email = document.getElementById('email');
 const errorMsg = document.getElementById('error-msg');
