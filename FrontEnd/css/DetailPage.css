@@ -163,10 +163,10 @@ header nav ul li a:hover {
 }
 
 #comment-input {
-	display: flex;
-	width: 1920px;
+	width: 1900px;
 	text-align: center;
 	justify-content: center;
+	display: none;
 }
 #comment {
 	width: 1200px;
